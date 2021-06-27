@@ -1,18 +1,33 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<!-- Page Wrapper -->
+  <div id="wrapper">
+    <side-bar/>
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+            <nav-bar/>
+            <content-area/>
+        </div>
+        <Footer/>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ContentArea from '@/components/ContentArea.vue'
+import SideBar from '@/components/SideBar.vue'
+import NavBar from '@/components/NavBar.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
-  name: 'home',
+  name: 'dashboard',
   components: {
-    HelloWorld
+    ContentArea,
+    SideBar,
+    NavBar,
+    Footer
   }
 }
 </script>
